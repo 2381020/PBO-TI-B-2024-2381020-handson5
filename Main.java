@@ -1,3 +1,4 @@
+import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
 
 public class Main {
@@ -96,4 +97,70 @@ public class Main {
         todos[number - 1] = newTodo;
         return true;
     }
+public static void showMainMenu()}
+boolean isRunning = true;
+while(isRunning){
+    showTodoList();
+    System.out.println("1. tambah");
+     System.out.println("2. hapus");
+      System.out.println("3. edit");
+       System.out.println("4. keluar");
+       String selectedMenu = input("pilih");
+
+       Switch(selectedMenu){
+           case "1" :
+               showMenuAddTodoList();
+               break;
+           case "2" :
+           showMenuRemoveTodoList();
+           break;
+
+           case "3" :
+           showMenuEditTodoList();
+           break;
+
+           case "4" :
+           isRunning = false;
+           break;
+           default:
+           System.out.println("print menu dengan benar");
+       }
+}
+        }
+
+        public static void showMenuAddTodoList(){
+            System.out.println("MENAMBAH TODO LIST");
+            String todo = input("Todo (x jika batal)")
+                    if(todo.equals("x")){
+
+                    }else{
+                        addTodoList(todo);
+                    }
+        }
+public static void showMenuAddTodoList(){
+    System.out.println("MENGHAPUS TODO LIST");
+    String number = input("Nomor yang dihapus (x jika batal)")
+    if(number.equals("x")){
+
+    }else{
+        boolean success = removeTodoList(Integer.parseInt(number));
+        if(!success){
+            System.out.println("Gagal menghapus todo list: " + number);
+        }
+    }
+}
+public static void showMenuAddTodoList(){
+    System.out.println("MENGEDIT TODO LIST");
+    String selectedtodo = input("masukkan Todo yang baru (x jika batal)")
+    if(newtodo.equals("x")) {
+        return;
+    }
+    boolean isEditTodoSuccess = editTodoList(Integer.parseInt(selectedtodo), newTodo);
+    if (isEditTodoSuccess){
+        System.out.println("berhasil mengedit todo");
+
+    }else{
+        System.out.println("gagal menghapus todo");
+    }
+}
 }
